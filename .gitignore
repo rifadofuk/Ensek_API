@@ -1,0 +1,101 @@
+## Ignore Visual Studio temporary files, build results, and user-specific files
+
+# Build Folders (bin and obj)
+bin/
+obj/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.log
+*.tlog
+*.vspx
+*.vspscc
+
+# Visual Studio Code workspace
+.vscode/
+
+# Visual Studio working directory
+.vs/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Rider settings
+.idea/
+
+# Backup & crash files
+*.bak
+*.orig
+*.tmp
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+*.psmdcp
+*.sdf
+*.cache
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Others
+*.dbmdl
+*.bak
+*.log
+*.sql
+*.sqlite
+*.mdf
+*.ldf
+*.jfm
+*.sdf
+
+# Publish artifacts
+*.publishsettings
+publish/
+
+# Local test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+*.testsettings
+*.vsmdi
+*.ts
+
+# Node.js (if applicable)
+node_modules/
+
+# npm log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python (if used)
+__pycache__/
+*.pyc
+
+# JetBrains Rider
+.idea/
+*.sln.iml

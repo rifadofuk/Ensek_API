@@ -1,0 +1,8 @@
+{
+  "report": {
+    "junit": {
+      "enabled": true,
+      "outputDirectory": "./reports/junit"
+    }
+  }
+}
