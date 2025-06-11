@@ -1,9 +1,7 @@
-﻿using Reqnroll;
-using EnseK_API_Automation;
+﻿using EnseK_API_Automation;
 using EnseK_API_Automation.config;
 using EnseK_API_Automation.Helpers;
-using Newtonsoft.Json;
-using NUnit.Framework;
+using Reqnroll;
 using RestSharp;
 
 namespace ENSEK_Test.Steps

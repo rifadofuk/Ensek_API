@@ -1,10 +1,8 @@
 ﻿using EnseK_API_Automation;
 using EnseK_API_Automation.config;
-using EnseK_API_Automation.constants;
-using EnseK_API_Automation.Models.Response;
 using EnseK_API_Automation.Helpers;
+using EnseK_API_Automation.Models.Response;
 using Newtonsoft.Json;
-using NUnit.Framework;
 
 namespace ENSEK_Test
 {
@@ -103,6 +101,6 @@ namespace ENSEK_Test
             }
         }
 
-       
+
     }
 }

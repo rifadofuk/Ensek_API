@@ -1,14 +1,8 @@
 ﻿using EnseK_API_Automation.config;
 using EnseK_API_Automation.constants;
 using EnseK_API_Automation.Models.Response;
-using NUnit.Framework;
 using RestSharp;
 using RestSharp.Authenticators;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EnseK_API_Automation.Auth
 {
@@ -64,5 +58,5 @@ namespace EnseK_API_Automation.Auth
             return $"Bearer {response.Data.Access_token}";
         }
     }
-    }
+}
 

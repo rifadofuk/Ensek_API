@@ -3,7 +3,6 @@ using EnseK_API_Automation.config;
 using EnseK_API_Automation.Helpers;
 using EnseK_API_Automation.Models.Response;
 using Newtonsoft.Json;
-using RestSharp;
 
 namespace ENSEK_Test;
 

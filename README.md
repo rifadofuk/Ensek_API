@@ -62,7 +62,7 @@ To Generate HTML report from TRX file, you can use ReportUnit or any other tool 
    livingdoc test-assembly --test-results ./TestResults/test_results.trx --output ./livingdoc.html
    ```
 Structure
-
+```bash
 EnseK_API_Automation/
 ├── APIClient.cs
 ├── Endpoints.cs
@@ -87,7 +87,8 @@ EnseK_API_Automation/
 │       ├── Order.cs
 │       ├── OrderList.cs
 │       └── TokenResponse.cs
-
+```
+```bash
 ENSEK_Test/
 ├── ENSEK_Test.csproj
 ├── reqnroll.json
@@ -117,5 +118,6 @@ ENSEK_Test/
 ├── GetOrdersTest.cs
 ├── ResetTest.cs
 └── UpdateOrderTest.cs
+```
 
 

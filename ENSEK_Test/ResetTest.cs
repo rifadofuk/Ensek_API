@@ -1,15 +1,12 @@
 ﻿using EnseK_API_Automation;
 using EnseK_API_Automation.config;
 using EnseK_API_Automation.Helpers;
-using EnseK_API_Automation.Models.Response;
-using Newtonsoft.Json;
-using RestSharp;
 
 namespace ENSEK_Test;
 
 public class ResetTest
 {
-    
+
     private APIClient apiClient;
 
     [SetUp]

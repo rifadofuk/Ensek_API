@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EnseK_API_Automation.config
+﻿namespace EnseK_API_Automation.config
 {
     public static class ApiCredentials
     {

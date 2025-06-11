@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EnseK_API_Automation.Models.Response
+﻿namespace EnseK_API_Automation.Models.Response
 {
-      public class EnergyInventory
+    public class EnergyInventory
     {
         public EnergySource Electric { get; set; }
         public EnergySource Gas { get; set; }

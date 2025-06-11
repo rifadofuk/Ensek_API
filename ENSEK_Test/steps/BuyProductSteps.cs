@@ -1,11 +1,9 @@
-﻿using Reqnroll;
-using EnseK_API_Automation;
+﻿using EnseK_API_Automation;
 using EnseK_API_Automation.config;
-using EnseK_API_Automation.constants;
-using EnseK_API_Automation.Models.Response;
 using EnseK_API_Automation.Helpers;
+using EnseK_API_Automation.Models.Response;
 using Newtonsoft.Json;
-using NUnit.Framework;
+using Reqnroll;
 using RestSharp;
 
 namespace ENSEK_Test.steps
@@ -61,7 +59,7 @@ namespace ENSEK_Test.steps
         public async Task WhenTheUserFetchesAndBuysEachFuel(string quantityStr)
         {
             int quantity = int.Parse(quantityStr);
-            var client = new APIClient(useAuthentication:true);
+            var client = new APIClient(useAuthentication: true);
             fuelResponse = await client.GetEnergyData();
             Assert.That((int)fuelResponse.StatusCode, Is.EqualTo(200), "Failed to fetch energy inventory.");
 

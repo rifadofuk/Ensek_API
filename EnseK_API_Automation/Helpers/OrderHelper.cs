@@ -2,7 +2,6 @@
 using EnseK_API_Automation.Models.Response;
 using Newtonsoft.Json;
 using NUnit.Framework;
-using RestSharp;
 using System.Text.RegularExpressions;
 
 namespace EnseK_API_Automation.Helpers
@@ -128,16 +127,16 @@ namespace EnseK_API_Automation.Helpers
                 return false;
             });
         }
-    
 
-    /// <summary>
-/// Validates the response message after purchasing a specific fuel. It checks cost, unit type, and order structure.
-/// </summary>
-/// <param name="fuelName">Fuel name</param>
-/// <param name="source">Energy source object from inventory</param>
-/// <param name="quantityToBuy">Quantity to buy</param>
-/// <param name="errors">List to append any validation errors</param>
-public static async Task ValidateFuelPurchaseDetails(string fuelName, EnergySource source, int quantityToBuy, List<string> errors)
+
+        /// <summary>
+        /// Validates the response message after purchasing a specific fuel. It checks cost, unit type, and order structure.
+        /// </summary>
+        /// <param name="fuelName">Fuel name</param>
+        /// <param name="source">Energy source object from inventory</param>
+        /// <param name="quantityToBuy">Quantity to buy</param>
+        /// <param name="errors">List to append any validation errors</param>
+        public static async Task ValidateFuelPurchaseDetails(string fuelName, EnergySource source, int quantityToBuy, List<string> errors)
         {
             try
             {
@@ -190,4 +189,4 @@ public static async Task ValidateFuelPurchaseDetails(string fuelName, EnergySour
         }
 
     }
-    }
+}

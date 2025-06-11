@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ENSEK_Test.steps
+﻿namespace ENSEK_Test.steps
 {
-    using Reqnroll;
     using EnseK_API_Automation;
     using EnseK_API_Automation.config;
+    using Reqnroll;
 
     [Binding]
     public sealed class GlobalHooks

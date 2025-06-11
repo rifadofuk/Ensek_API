@@ -1,11 +1,8 @@
-﻿using Reqnroll;
-using EnseK_API_Automation;
-using EnseK_API_Automation.config;
-using EnseK_API_Automation.Helpers;
+﻿using EnseK_API_Automation;
 using EnseK_API_Automation.Models.Request;
 using EnseK_API_Automation.Models.Response;
 using Newtonsoft.Json;
-using NUnit.Framework;
+using Reqnroll;
 
 namespace ENSEK_Test.Steps
 {
@@ -23,7 +20,7 @@ namespace ENSEK_Test.Steps
         [Given("the user has existing orders and inventory")]
         public async Task GivenTheUserHasExistingOrdersAndInventory()
         {
-            client = new APIClient(useAuthentication:true);
+            client = new APIClient(useAuthentication: true);
             var ordersResponse = await client.GetOrders();
             Assert.That((int)ordersResponse.StatusCode, Is.EqualTo(200), "❌ Failed to fetch orders");
 

@@ -1,12 +1,6 @@
 ﻿using EnseK_API_Automation.Auth;
 using EnseK_API_Automation.constants;
 using RestSharp;
-using RestSharp.Authenticators;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EnseK_API_Automation
 {
@@ -83,7 +77,7 @@ namespace EnseK_API_Automation
 
         public async Task<RestResponse> UpdateOrder<T>(T payload, string orderId) where T : class
         {
-            var request = new RestRequest(Endpoints.UPDATE_ORDER,Method.Put);
+            var request = new RestRequest(Endpoints.UPDATE_ORDER, Method.Put);
             request.AddBody(payload);
             request.AddUrlSegment("orderId", orderId);
             return await restClient.ExecuteAsync<T>(request);
