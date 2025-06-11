@@ -11,7 +11,7 @@
 #region Designer generated code
 #pragma warning disable
 using Reqnroll;
-namespace ENSEK_Test.Features
+namespace Ensek_Tests.Features
 {
     
     
