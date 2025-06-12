@@ -15,9 +15,9 @@ This project provides automated API tests for the ENSEK energy order system usin
 
 ## Setup
 
-1. **Clone the repository** and open the solution in Visual Stu# ENSEK Automation Candidate Test
+1. **Clone the repository** and open the solution in Visual Studio 
 
-This project is a test automation or development assignment based on the ENSEK Automation Candidate Test platform.
+This project is a test automation or development assignment based on the ENSEK Automation.
 
 ## 🚀 Getting Started
 
@@ -37,7 +37,7 @@ Follow the instructions below to get the project up and running in your local de
    Open a terminal and run:
 
    ```bash
-   git clone
+   git clone <repository-url>>
 2. **Restore NuGet packages**:  
    Visual Studio will restore packages automatically, or run:
 
