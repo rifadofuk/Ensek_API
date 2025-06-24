@@ -11,34 +11,22 @@ namespace ENSEK_Test.steps
     [Binding]
     public class BuyProductSteps
     {
-        private APIClient apiClient;
+        private readonly IApiClientFactory _clientFactory;
+        private APIClient _apiClient;
         private RestResponse response;
         private RestResponse fuelResponse;
-        private FeatureContext _featureContext;
-        private int expectedStatusCode;
-        private List<string> validationErrors = new();
+        private readonly FeatureContext _featureContext;
+        private readonly List<string> validationErrors = new();
 
-        //[Given("the system is reset to a clean state")]
-        //public async Task GivenTheSystemIsResetToACleanState()
-        //{
-        //    EnvironmentConfig.CurrentEnvironment = Environment.GetEnvironmentVariable("ENSEK_ENV") ?? "QA";
-        //    ApiCredentials.ClearOverrides();
-        //    apiClient = new APIClient(useAuthentication: true);
-        //    var resetResponse = await apiClient.Reset();
-        //    Assert.That((int)resetResponse.StatusCode, Is.EqualTo(200), "Reset failed.");
-        //}
-
-        public BuyProductSteps(FeatureContext fc)
+        public BuyProductSteps(FeatureContext featureContext, IApiClientFactory clientFactory)
         {
-            this._featureContext= fc;
-            // Initialize the API client with authentication enabled
+            _featureContext = featureContext;
+            _clientFactory = clientFactory;
         }
 
         [Given(@"the user's credentials are overridden with ""(.*)"" and ""(.*)""")]
         public void GivenUserCredentialsAreOverridden(string username, string password)
         {
-           // apiClient = _featureContext.Get<APIClient>("ApiClient") ?? new APIClient(useAuthentication: true);
-
             Console.WriteLine(_featureContext.FeatureInfo.Title);
             ApiCredentials.OverrideUsername = username;
             ApiCredentials.OverridePassword = password;
@@ -47,15 +35,15 @@ namespace ENSEK_Test.steps
         [When(@"the user buys product with ID ""(.*)"" and quantity ""(.*)""")]
         public async Task WhenTheUserBuysProduct(string productId, string quantity)
         {
-            apiClient = new APIClient(useAuthentication: true);
-            response = await apiClient.BuyProduct(productId, quantity);
+            _apiClient = _clientFactory.Create(useAuthentication: true);
+            response = await _apiClient.BuyProduct(productId, quantity);
         }
 
         [When(@"an unauthenticated user buys product with ID ""(.*)"" and quantity ""(.*)""")]
         public async Task WhenAnUnauthenticatedUserBuysProduct(string productId, string quantity)
         {
-            var unauthClient = new APIClient(useAuthentication: false);
-            response = await unauthClient.BuyProduct(productId, quantity);
+            _apiClient = _clientFactory.Create(useAuthentication: false);
+            response = await _apiClient.BuyProduct(productId, quantity);
         }
 
         [Then(@"the response code should be (\d+)")]
@@ -69,10 +57,10 @@ namespace ENSEK_Test.steps
         public async Task WhenTheUserFetchesAndBuysEachFuel(string quantityStr)
         {
             int quantity = int.Parse(quantityStr);
-            var client = new APIClient(useAuthentication: true);
+            var client = _clientFactory.Create(useAuthentication: true);
             fuelResponse = await client.GetEnergyData();
-            Assert.That((int)fuelResponse.StatusCode, Is.EqualTo(200), "Failed to fetch energy inventory.");
 
+            Assert.That((int)fuelResponse.StatusCode, Is.EqualTo(200), "Failed to fetch energy inventory.");
             var inventory = JsonConvert.DeserializeObject<EnergyInventory>(fuelResponse.Content);
             Assert.IsNotNull(inventory, "Failed to deserialize energy inventory.");
 
