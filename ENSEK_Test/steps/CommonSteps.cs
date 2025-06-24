@@ -11,6 +11,14 @@
         public class CommonSetupSteps
         {
             private APIClient apiClient;
+            private FeatureContext featureContext;
+
+            public CommonSetupSteps(FeatureContext fc)
+            {
+                // Store the feature context for later use
+                this.featureContext = fc;
+
+            }
 
             [Given(@"the test environment is set to ""(.*)""")]
             public void GivenTheTestEnvironmentIsSetTo(string environment)
@@ -18,6 +26,7 @@
                 EnvironmentConfig.CurrentEnvironment = environment;
                 ApiCredentials.ClearOverrides();
                 apiClient = new APIClient(useAuthentication: true);
+                featureContext.Set(apiClient,"ApiClient");
             }
 
             [Given("the system is reset to a clean state")]

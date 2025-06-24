@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="0" runstate="Runnable" testcasecount="26" result="Failed" total="26" passed="17" failed="9" warnings="0" inconclusive="0" skipped="0" asserts="107" engine-version="3.20.1.0" clr-version="4.0.30319.42000" start-time="2025-06-12 10:30:55Z" end-time="2025-06-12 10:31:09Z" duration="13.729196">
+  <command-line><![CDATA["C:\ProgramData\chocolatey\lib\nunit-console-runner\tools\nunit3-console.exe" ENSEK_Test\bin\Debug\net8.0\Ensek_Tests.dll --result=nunit-results.xml]]></command-line>
+  <test-suite type="Assembly" id="1-1038" name="Ensek_Tests.dll" fullname="C:/Users/User/source/repos/EnseK_API/ENSEK_Test/bin/Debug/net8.0/Ensek_Tests.dll" runstate="Runnable" testcasecount="26" result="Failed" site="Child" start-time="2025-06-12T10:30:56.0688640Z" end-time="2025-06-12T10:31:09.3852886Z" duration="13.316388" total="26" passed="17" failed="9" warnings="0" inconclusive="0" skipped="0" asserts="107">
+    <environment framework-version="3.14.0.0" clr-version="8.0.16" os-version="Microsoft Windows 10.0.22631" platform="Win32NT" cwd="C:\Users\User\source\repos\EnseK_API" machine-name="DESKTOP-77AF2BV" user="User" user-domain="DESKTOP-77AF2BV" culture="en-GB" uiculture="en-US" os-architecture="x64" />
+    <settings>
+      <setting name="DisposeRunners" value="True" />
+      <setting name="WorkDirectory" value="C:\Users\User\source\repos\EnseK_API" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETCoreApp,Version=v8.0" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="TargetRuntimeFramework" value="netcore-8.0" />
+      <setting name="NumberOfTestWorkers" value="8" />
+    </settings>
+    <properties>
+      <property name="_PID" value="25796" />
+      <property name="_APPDOMAIN" value="nunit-agent" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="SetUpFixture" id="1-1000" name="[default namespace]" fullname="Ensek_Tests_NUnitAssemblyHooks" classname="Ensek_Tests_NUnitAssemblyHooks" runstate="Runnable" testcasecount="26" result="Failed" site="Child" start-time="2025-06-12T10:30:56.0732262Z" end-time="2025-06-12T10:31:09.3852495Z" duration="13.312024" total="26" passed="17" failed="9" warnings="0" inconclusive="0" skipped="0" asserts="107">
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <output><![CDATA[-> Loading plugin C:\Users\User\source\repos\EnseK_API\ENSEK_Test\bin\Debug\net8.0\Reqnroll.NUnit.ReqnrollPlugin.dll
+-> Loading plugin C:\Users\User\source\repos\EnseK_API\ENSEK_Test\bin\Debug\net8.0\Ensek_Tests.dll
+-> Using reqnroll.json
+]]></output>
+      <test-suite type="TestSuite" id="1-1041" name="ENSEK_Test" fullname="ENSEK_Test" runstate="Runnable" testcasecount="12" result="Failed" site="Child" start-time="2025-06-12T10:30:56.5229505Z" end-time="2025-06-12T10:31:02.5968138Z" duration="6.073863" total="12" passed="8" failed="4" warnings="0" inconclusive="0" skipped="0" asserts="44">
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestFixture" id="1-1021" name="BuyProductTests" fullname="ENSEK_Test.BuyProductTests" classname="ENSEK_Test.BuyProductTests" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2025-06-12T10:30:56.5230346Z" end-time="2025-06-12T10:30:59.0248626Z" duration="2.501829" total="5" passed="3" failed="2" warnings="0" inconclusive="0" skipped="0" asserts="13">
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-case id="1-1026" name="Verify_BuyEachAvailableFuel_ShouldValidateDetails_On_TheResponse_Message" fullname="ENSEK_Test.BuyProductTests.Verify_BuyEachAvailableFuel_ShouldValidateDetails_On_TheResponse_Message" methodname="Verify_BuyEachAvailableFuel_ShouldValidateDetails_On_TheResponse_Message" classname="ENSEK_Test.BuyProductTests" runstate="Runnable" seed="803572929" result="Failed" start-time="2025-06-12T10:30:56.5236455Z" end-time="2025-06-12T10:30:57.8408633Z" duration="1.317286" asserts="3">
+            <failure>
+              <message><![CDATA[❌ One or more assertions failed:
+❌ gas: Quantity/unit mismatch in message.
+❌ gas: Remaining quantity 2999 not found in message.
+❌ oil: Expected cost 0.5 not found in message.]]></message>
+              <stack-trace><![CDATA[   at ENSEK_Test.BuyProductTests.Verify_BuyEachAvailableFuel_ShouldValidateDetails_On_TheResponse_Message() in C:\Users\User\source\repos\EnseK_API\ENSEK_Test\BuyProductTests.cs:line 100
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(Func`1 invoke)
+   at NUnit.Framework.Internal.Commands.TestMethodCommand.RunTestMethod(TestExecutionContext context)
+   at NUnit.Framework.Internal.Commands.TestMethodCommand.Execute(TestExecutionContext context)
+   at NUnit.Framework.Internal.Commands.BeforeAndAfterTestCommand.<>c__DisplayClass1_0.<Execute>b__0()
+   at NUnit.Framework.Internal.Commands.DelegatingTestCommand.RunTestMethodInThreadAbortSafeZone(TestExecutionContext context, Action action)
+]]></stack-trace>
+            </failure>
+            <output><![CDATA[🧪 electric: Response => You have purchased 1 kWh at a cost of 0.47 there are 4321 units remaining. Your order id is 116f78be-be45-40bc-9014-dd7aa7ade80b.
+🧪 gas: Response => You have purchased 2999 m³ at a cost of 0.34 there are 1 units remaining. Your order id is cc9f8e67-61ba-4912-a765-9d8e8d5529ff.
+🧪 nuclear: Response => There is no nuclear fuel to purchase!
+🧪 oil: Response => You have purchased 1 Litres at a cost of 0.6 there are 19 units remaining. Your orderid is 16b66088-8815-45ee-8c7e-e8a7c2a964c0.
+]]></output>
+            <assertions>
+              <assertion result="Failed">
+                <message><![CDATA[❌ One or more assertions failed:
+❌ gas: Quantity/unit mismatch in message.
+❌ gas: Remaining quantity 2999 not found in message.
+❌ oil: Expected cost 0.5 not found in message.]]></message>
+                <stack-trace><![CDATA[   at ENSEK_Test.BuyProductTests.Verify_BuyEachAvailableFuel_ShouldValidateDetails_On_TheResponse_Message() in C:\Users\User\source\repos\EnseK_API\ENSEK_Test\BuyProductTests.cs:line 100
+]]></stack-trace>
+              </assertion>
+            </assertions>
+          </test-case>
+          <test-case id="1-1025" name="VerifyBadRequestsAreHandled" fullname="ENSEK_Test.BuyProductTests.VerifyBadRequestsAreHandled" methodname="VerifyBadRequestsAreHandled" classname="ENSEK_Test.BuyProductTests" runstate="Runnable" seed="118333676" result="Passed" start-time="2025-06-12T10:30:57.8421670Z" end-time="2025-06-12T10:30:58.1301993Z" duration="0.288033" asserts="2">
+            <output><![CDATA[❌ Request failed: BadRequest - No error message
+]]></output>
+          </test-case>
+          <test-case id="1-1023" name="VerifyUnauthorizedUserCannotBuyProduct" fullname="ENSEK_Test.BuyProductTests.VerifyUnauthorizedUserCannotBuyProduct" methodname="VerifyUnauthorizedUserCannotBuyProduct" classname="ENSEK_Test.BuyProductTests" runstate="Runnable" seed="1962141766" result="Failed" start-time="2025-06-12T10:30:58.1302435Z" end-time="2025-06-12T10:30:58.4245631Z" duration="0.294320" asserts="2">
+            <failure>
+              <message><![CDATA[  Expected: 401
+  But was:  200
+]]></message>
+              <stack-trace><![CDATA[   at ENSEK_Test.BuyProductTests.VerifyUnauthorizedUserCannotBuyProduct() in C:\Users\User\source\repos\EnseK_API\ENSEK_Test\BuyProductTests.cs:line 48
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(Func`1 invoke)
+   at NUnit.Framework.Internal.Commands.TestMethodCommand.RunTestMethod(TestExecutionContext context)
+   at NUnit.Framework.Internal.Commands.TestMethodCommand.Execute(TestExecutionContext context)
+   at NUnit.Framework.Internal.Commands.BeforeAndAfterTestCommand.<>c__DisplayClass1_0.<Execute>b__0()
+   at NUnit.Framework.Internal.Commands.DelegatingTestCommand.RunTestMethodInThreadAbortSafeZone(TestExecutionContext context, Action action)
+]]></stack-trace>
+            </failure>
+            <assertions>
+              <assertion result="Failed">
+                <message><![CDATA[  Expected: 401
+  But was:  200
+]]></message>
+                <stack-trace><![CDATA[   at ENSEK_Test.BuyProductTests.VerifyUnauthorizedUserCannotBuyProduct() in C:\Users\User\source\repos\EnseK_API\ENSEK_Test\BuyProductTests.cs:line 48
+]]></stack-trace>
+              </assertion>
+            </assertions>
+          </test-case>
+          <test-case id="1-1022" name="VerifyUserCanBuyProducts" fullname="ENSEK_Test.BuyProductTests.VerifyUserCanBuyProducts" methodname="VerifyUserCanBuyProducts" classname="ENSEK_Test.BuyProductTests" runstate="Runnable" seed="1260833954" result="Passed" start-time="2025-06-12T10:30:58.4245895Z" end-time="2025-06-12T10:30:58.7424322Z" duration="0.317843" asserts="3">
+            <output><![CDATA[✅ Response deserialized: {
+  "message": "You have purchased 2998 m³ at a cost of 0.68 there are 2 units remaining. Your order id is 421defc0-84c8-418f-bfb7-5df65d09e8ff."
+}
+]]></output>
+          </test-case>
+          <test-case id="1-1024" name="VerifyUserCanBuyProductWithoutAuthentication" fullname="ENSEK_Test.BuyProductTests.VerifyUserCanBuyProductWithoutAuthentication" methodname="VerifyUserCanBuyProductWithoutAuthentication" classname="ENSEK_Test.BuyProductTests" runstate="Runnable" seed="1536417453" result="Passed" start-time="2025-06-12T10:30:58.7424610Z" end-time="2025-06-12T10:30:59.0216017Z" duration="0.279142" asserts="3">
+            <output><![CDATA[✅ Response deserialized: {
+  "message": "You have purchased 2998 m³ at a cost of 0.68 there are 2 units remaining. Your order id is e7026ffd-0eb6-4e45-b9c4-24926d7afe60."
+}
+]]></output>
+          </test-case>
+        </test-suite>
+        <test-suite type="TestFixture" id="1-1027" name="DeleteOrderTest" fullname="ENSEK_Test.DeleteOrderTest" classname="ENSEK_Test.DeleteOrderTest" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2025-06-12T10:30:59.0275272Z" end-time="2025-06-12T10:30:59.5130027Z" duration="0.485475" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="5">
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-case id="1-1028" name="VerifyUserCanDeleteValidOrders" fullname="ENSEK_Test.DeleteOrderTest.VerifyUserCanDeleteValidOrders" methodname="VerifyUserCanDeleteValidOrders" classname="ENSEK_Test.DeleteOrderTest" runstate="Runnable" seed="1469241063" result="Failed" start-time="2025-06-12T10:30:59.0276927Z" end-time="2025-06-12T10:30:59.5129143Z" duration="0.485222" asserts="5">
+            <failure>
+              <message><![CDATA[  ❌ Failed to delete the order.
+  Expected: 200
+  But was:  500
+]]></message>
+              <stack-trace><![CDATA[   at ENSEK_Test.DeleteOrderTest.VerifyUserCanDeleteValidOrders() in C:\Users\User\source\repos\EnseK_API\ENSEK_Test\DeleteOrderTest.cs:line 52
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(Func`1 invoke)
+   at NUnit.Framework.Internal.Commands.TestMethodCommand.RunTestMethod(TestExecutionContext context)
+   at NUnit.Framework.Internal.Commands.TestMethodCommand.Execute(TestExecutionContext context)
+   at NUnit.Framework.Internal.Commands.BeforeAndAfterTestCommand.<>c__DisplayClass1_0.<Execute>b__0()
+   at NUnit.Framework.Internal.Commands.DelegatingTestCommand.RunTestMethodInThreadAbortSafeZone(TestExecutionContext context, Action action)
+]]></stack-trace>
+            </failure>
+            <output><![CDATA[❌ Request failed: InternalServerError - No error message
+]]></output>
+            <assertions>
+              <assertion result="Failed">
+                <message><![CDATA[  ❌ Failed to delete the order.
+  Expected: 200
+  But was:  500
+]]></message>
+                <stack-trace><![CDATA[   at ENSEK_Test.DeleteOrderTest.VerifyUserCanDeleteValidOrders() in C:\Users\User\source\repos\EnseK_API\ENSEK_Test\DeleteOrderTest.cs:line 52
+]]></stack-trace>
+              </assertion>
+            </assertions>
+          </test-case>
+        </test-suite>
+        <test-suite type="TestFixture" id="1-1029" name="GetOrdersTests" fullname="ENSEK_Test.GetOrdersTests" classname="ENSEK_Test.GetOrdersTests" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2025-06-12T10:30:59.5130392Z" end-time="2025-06-12T10:31:01.0799189Z" duration="1.566880" total="2" passed="1" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="8">
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-case id="1-1030" name="BuyFuelsAndVerifyOrders_ShouldMatchPlacedOrders" fullname="ENSEK_Test.GetOrdersTests.BuyFuelsAndVerifyOrders_ShouldMatchPlacedOrders" methodname="BuyFuelsAndVerifyOrders_ShouldMatchPlacedOrders" classname="ENSEK_Test.GetOrdersTests" runstate="Runnable" seed="626091866" result="Failed" start-time="2025-06-12T10:30:59.5131636Z" end-time="2025-06-12T10:31:00.7203718Z" duration="1.207209" asserts="5">
+            <failure>
+              <message><![CDATA[One or more validation errors:
+❌ Order missing: ID=f85a7663-b7b9-4837-85a5-daf6f3cb8a88, Fuel=Electric, Qty=1]]></message>
+              <stack-trace><![CDATA[   at ENSEK_Test.GetOrdersTests.BuyFuelsAndVerifyOrders_ShouldMatchPlacedOrders() in C:\Users\User\source\repos\EnseK_API\ENSEK_Test\GetOrdersTest.cs:line 54
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(Func`1 invoke)
+   at NUnit.Framework.Internal.Commands.TestMethodCommand.RunTestMethod(TestExecutionContext context)
+   at NUnit.Framework.Internal.Commands.TestMethodCommand.Execute(TestExecutionContext context)
+   at NUnit.Framework.Internal.Commands.BeforeAndAfterTestCommand.<>c__DisplayClass1_0.<Execute>b__0()
+   at NUnit.Framework.Internal.Commands.DelegatingTestCommand.RunTestMethodInThreadAbortSafeZone(TestExecutionContext context, Action action)
+]]></stack-trace>
+            </failure>
+            <output><![CDATA[🧪 Electric: You have purchased 1 kWh at a cost of 0.47 there are 4321 units remaining. Your order id is f85a7663-b7b9-4837-85a5-daf6f3cb8a88.
+🧪 Gas: You have purchased 2999 m³ at a cost of 0.34 there are 1 units remaining. Your order id is 5d3b7086-6eaf-40b1-a084-66b7954403ee.
+🧪 Nuclear: There is no nuclear fuel to purchase!
+🧪 Oil: You have purchased 1 Litres at a cost of 0.6 there are 19 units remaining. Your orderid is 066c6261-91e7-4ebb-b810-4fdbc3418b81.
+]]></output>
+            <assertions>
+              <assertion result="Failed">
+                <message><![CDATA[One or more validation errors:
+❌ Order missing: ID=f85a7663-b7b9-4837-85a5-daf6f3cb8a88, Fuel=Electric, Qty=1]]></message>
+                <stack-trace><![CDATA[   at ENSEK_Test.GetOrdersTests.BuyFuelsAndVerifyOrders_ShouldMatchPlacedOrders() in C:\Users\User\source\repos\EnseK_API\ENSEK_Test\GetOrdersTest.cs:line 54
+]]></stack-trace>
+              </assertion>
+            </assertions>
+          </test-case>
+          <test-case id="1-1031" name="Verify_Num_orders_were_created_before_the_current_date" fullname="ENSEK_Test.GetOrdersTests.Verify_Num_orders_were_created_before_the_current_date" methodname="Verify_Num_orders_were_created_before_the_current_date" classname="ENSEK_Test.GetOrdersTests" runstate="Runnable" seed="1696997020" result="Passed" start-time="2025-06-12T10:31:00.7204285Z" end-time="2025-06-12T10:31:01.0798314Z" duration="0.359403" asserts="3">
+            <output><![CDATA[✅ Number of orders created before today: 5
+]]></output>
+          </test-case>
+        </test-suite>
+        <test-suite type="TestFixture" id="1-1032" name="ResetTest" fullname="ENSEK_Test.ResetTest" classname="ENSEK_Test.ResetTest" runstate="Runnable" testcasecount="3" result="Passed" start-time="2025-06-12T10:31:01.0805935Z" end-time="2025-06-12T10:31:02.0731271Z" duration="0.992533" total="3" passed="3" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="7">
+          <test-case id="1-1034" name="VerifyInvalidUserCanNotReset" fullname="ENSEK_Test.ResetTest.VerifyInvalidUserCanNotReset" methodname="VerifyInvalidUserCanNotReset" classname="ENSEK_Test.ResetTest" runstate="Runnable" seed="1854072380" result="Passed" start-time="2025-06-12T10:31:01.0809267Z" end-time="2025-06-12T10:31:01.4480552Z" duration="0.367129" asserts="2">
+            <output><![CDATA[❌ Request failed: Unauthorized - No error message
+]]></output>
+          </test-case>
+          <test-case id="1-1035" name="VerifyUserCannotResetWithoutAuthentication" fullname="ENSEK_Test.ResetTest.VerifyUserCannotResetWithoutAuthentication" methodname="VerifyUserCannotResetWithoutAuthentication" classname="ENSEK_Test.ResetTest" runstate="Runnable" seed="1995127476" result="Passed" start-time="2025-06-12T10:31:01.4480934Z" end-time="2025-06-12T10:31:01.7205243Z" duration="0.272432" asserts="2">
+            <output><![CDATA[❌ Request failed: Unauthorized - No error message
+]]></output>
+          </test-case>
+          <test-case id="1-1033" name="VerifyValidUserCanReset" fullname="ENSEK_Test.ResetTest.VerifyValidUserCanReset" methodname="VerifyValidUserCanReset" classname="ENSEK_Test.ResetTest" runstate="Runnable" seed="868333797" result="Passed" start-time="2025-06-12T10:31:01.7208085Z" end-time="2025-06-12T10:31:02.0730111Z" duration="0.352203" asserts="3">
+            <output><![CDATA[✅ Response deserialized: {
+  "message": "Success"
+}
+]]></output>
+          </test-case>
+        </test-suite>
+        <test-suite type="TestFixture" id="1-1036" name="UpdateOrderTest" fullname="ENSEK_Test.UpdateOrderTest" classname="ENSEK_Test.UpdateOrderTest" runstate="Runnable" testcasecount="1" result="Passed" start-time="2025-06-12T10:31:02.0732085Z" end-time="2025-06-12T10:31:02.5967963Z" duration="0.523588" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="11">
+          <test-case id="1-1037" name="VerifyUserCanUpdateOrder" fullname="ENSEK_Test.UpdateOrderTest.VerifyUserCanUpdateOrder" methodname="VerifyUserCanUpdateOrder" classname="ENSEK_Test.UpdateOrderTest" runstate="Runnable" seed="822070208" result="Passed" start-time="2025-06-12T10:31:02.0741846Z" end-time="2025-06-12T10:31:02.5967512Z" duration="0.522567" asserts="11">
+            <output><![CDATA[✅ Order 31fc32da-bccb-44ab-9352-4f43fc44ed4b updated: quantity changed to 6, energy_id=1
+]]></output>
+          </test-case>
+        </test-suite>
+      </test-suite>
+      <test-suite type="TestSuite" id="1-1039" name="Ensek_Tests" fullname="Ensek_Tests" runstate="Runnable" testcasecount="14" result="Failed" site="Child" start-time="2025-06-12T10:30:56.5230102Z" end-time="2025-06-12T10:31:09.3775315Z" duration="12.854521" total="14" passed="9" failed="5" warnings="0" inconclusive="0" skipped="0" asserts="63">
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1-1040" name="Features" fullname="Ensek_Tests.Features" runstate="Runnable" testcasecount="14" result="Failed" site="Child" start-time="2025-06-12T10:30:56.5230136Z" end-time="2025-06-12T10:31:09.3767114Z" duration="12.853698" total="14" passed="9" failed="5" warnings="0" inconclusive="0" skipped="0" asserts="63">
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1-1012" name="APIResetEndpointFeature" fullname="Ensek_Tests.Features.APIResetEndpointFeature" classname="Ensek_Tests.Features.APIResetEndpointFeature" runstate="Runnable" testcasecount="3" result="Passed" start-time="2025-06-12T10:31:02.5968444Z" end-time="2025-06-12T10:31:03.1116550Z" duration="0.514811" total="3" passed="3" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="4">
+            <properties>
+              <property name="Description" value="API Reset Endpoint" />
+              <property name="Category" value="feature" />
+            </properties>
+            <test-case id="1-1014" name="InvalidUserCannotResetTheSystem" fullname="Ensek_Tests.Features.APIResetEndpointFeature.InvalidUserCannotResetTheSystem" methodname="InvalidUserCannotResetTheSystem" classname="Ensek_Tests.Features.APIResetEndpointFeature" runstate="Runnable" seed="275660880" result="Passed" start-time="2025-06-12T10:31:02.5980821Z" end-time="2025-06-12T10:31:02.8132645Z" duration="0.215182" asserts="1">
+              <properties>
+                <property name="Description" value="Invalid user cannot reset the system" />
+              </properties>
+              <output><![CDATA[Given the test environment is set to "QA"
+-> done: CommonSetupSteps.GivenTheTestEnvironmentIsSetTo("QA") (0.0s)
+When the user performs a reset with invalid credentials
+-> done: ResetSteps.WhenTheUserPerformsResetWithInvalidCredentials() (0.2s)
+Then the reset response status code should be 401
+❌ Request failed: Unauthorized - No error message
+-> done: ResetSteps.ThenTheResetResponseStatusCodeShouldBe(401) (0.0s)
+]]></output>
+            </test-case>
+            <test-case id="1-1015" name="ResetWithoutAuthenticationIsNotAllowed" fullname="Ensek_Tests.Features.APIResetEndpointFeature.ResetWithoutAuthenticationIsNotAllowed" methodname="ResetWithoutAuthenticationIsNotAllowed" classname="Ensek_Tests.Features.APIResetEndpointFeature" runstate="Runnable" seed="1122087121" result="Passed" start-time="2025-06-12T10:31:02.8132923Z" end-time="2025-06-12T10:31:02.9276042Z" duration="0.114312" asserts="1">
+              <properties>
+                <property name="Description" value="Reset without authentication is not allowed" />
+              </properties>
+              <output><![CDATA[Given the test environment is set to "QA"
+-> done: CommonSetupSteps.GivenTheTestEnvironmentIsSetTo("QA") (0.0s)
+When the user performs a reset without authentication
+-> done: ResetSteps.WhenTheUserPerformsResetWithoutAuthentication() (0.1s)
+Then the reset response status code should be 401
+❌ Request failed: Unauthorized - No error message
+-> done: ResetSteps.ThenTheResetResponseStatusCodeShouldBe(401) (0.0s)
+]]></output>
+            </test-case>
+            <test-case id="1-1013" name="ValidUserCanResetTheSystem" fullname="Ensek_Tests.Features.APIResetEndpointFeature.ValidUserCanResetTheSystem" methodname="ValidUserCanResetTheSystem" classname="Ensek_Tests.Features.APIResetEndpointFeature" runstate="Runnable" seed="1178666400" result="Passed" start-time="2025-06-12T10:31:02.9276640Z" end-time="2025-06-12T10:31:03.1091707Z" duration="0.181507" asserts="2">
+              <properties>
+                <property name="Description" value="Valid user can reset the system" />
+              </properties>
+              <output><![CDATA[Given the test environment is set to "QA"
+-> done: CommonSetupSteps.GivenTheTestEnvironmentIsSetTo("QA") (0.0s)
+When the user performs a reset with valid credentials
+-> done: ResetSteps.WhenTheUserPerformsResetWithValidCredentials() (0.2s)
+Then the reset response status code should be 200
+✅ Response deserialized: {
+  "message": "Success"
+}
+-> done: ResetSteps.ThenTheResetResponseStatusCodeShouldBe(200) (0.0s)
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1-1001" name="BuyEnergyProductsFeature" fullname="Ensek_Tests.Features.BuyEnergyProductsFeature" classname="Ensek_Tests.Features.BuyEnergyProductsFeature" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2025-06-12T10:31:03.1117315Z" end-time="2025-06-12T10:31:05.5743912Z" duration="2.462660" total="5" passed="3" failed="2" warnings="0" inconclusive="0" skipped="0" asserts="13">
+            <properties>
+              <property name="Description" value="Buy Energy Products" />
+              <property name="Category" value="feature" />
+            </properties>
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1-1002" name="AuthenticatedUserBuysAProduct" fullname="Ensek_Tests.Features.BuyEnergyProductsFeature.AuthenticatedUserBuysAProduct" methodname="AuthenticatedUserBuysAProduct" classname="Ensek_Tests.Features.BuyEnergyProductsFeature" runstate="Runnable" seed="87147474" result="Passed" start-time="2025-06-12T10:31:03.1123295Z" end-time="2025-06-12T10:31:03.4825612Z" duration="0.370232" asserts="3">
+              <properties>
+                <property name="Description" value="Authenticated user buys a product" />
+              </properties>
+              <output><![CDATA[Given the test environment is set to "QA"
+-> done: CommonSetupSteps.GivenTheTestEnvironmentIsSetTo("QA") (0.0s)
+Given the system is reset to a clean state
+-> done: CommonSetupSteps.GivenTheSystemIsResetToACleanState() (0.2s)
+When the user buys product with ID "1" and quantity "2"
+-> done: BuyProductSteps.WhenTheUserBuysProduct("1", "2") (0.2s)
+Then the response code should be 200
+✅ Response deserialized: {
+  "message": "You have purchased 2998 m³ at a cost of 0.68 there are 2 units remaining. Your order id is a74c3bf4-9fbe-4057-a540-5fdc346f315a."
+}
+-> done: BuyProductSteps.ThenTheResponseCodeShouldBe(200) (0.0s)
+]]></output>
+            </test-case>
+            <test-case id="1-1006" name="BuyEachAvailableFuelAndValidateResponse" fullname="Ensek_Tests.Features.BuyEnergyProductsFeature.BuyEachAvailableFuelAndValidateResponse" methodname="BuyEachAvailableFuelAndValidateResponse" classname="Ensek_Tests.Features.BuyEnergyProductsFeature" runstate="Runnable" seed="2059576255" result="Failed" start-time="2025-06-12T10:31:03.4826073Z" end-time="2025-06-12T10:31:04.6009291Z" duration="1.118322" asserts="3">
+              <properties>
+                <property name="Description" value="Buy each available fuel and validate response" />
+              </properties>
+              <failure>
+                <message><![CDATA[❌ One or more assertions failed:
+❌ gas: Quantity/unit mismatch in message.
+❌ gas: Remaining quantity 2999 not found in message.
+❌ oil: Expected cost 0.5 not found in message.]]></message>
+                <stack-trace><![CDATA[   at ENSEK_Test.steps.BuyProductSteps.ThenAllPurchaseResponsesShouldBeValid() in C:\Users\User\source\repos\EnseK_API\ENSEK_Test\steps\BuyProductSteps.cs:line 88
+   at InvokeStub_Action`1.Invoke(Object, Span`1)
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Given the test environment is set to "QA"
+-> done: CommonSetupSteps.GivenTheTestEnvironmentIsSetTo("QA") (0.0s)
+Given the system is reset to a clean state
+-> done: CommonSetupSteps.GivenTheSystemIsResetToACleanState() (0.2s)
+When the user fetches available fuels and buys each with quantity "1"
+🧪 electric: Response => You have purchased 1 kWh at a cost of 0.47 there are 4321 units remaining. Your order id is 9f97cb90-36ae-4ec1-8933-aa1de5ac7fa3.
+🧪 gas: Response => You have purchased 2999 m³ at a cost of 0.34 there are 1 units remaining. Your order id is 5a9dbd4d-8043-4e01-89af-90b1cf63a9a9.
+🧪 nuclear: Response => There is no nuclear fuel to purchase!
+🧪 oil: Response => You have purchased 1 Litres at a cost of 0.6 there are 19 units remaining. Your orderid is 25f5f272-c30e-490e-8d81-f0053168941c.
+-> done: BuyProductSteps.WhenTheUserFetchesAndBuysEachFuel("1") (0.9s)
+Then all purchase responses should be valid
+-> error: ❌ One or more assertions failed:
+❌ gas: Quantity/unit mismatch in message.
+❌ gas: Remaining quantity 2999 not found in message.
+❌ oil: Expected cost 0.5 not found in message. (0.0s)
+]]></output>
+              <assertions>
+                <assertion result="Failed">
+                  <message><![CDATA[❌ One or more assertions failed:
+❌ gas: Quantity/unit mismatch in message.
+❌ gas: Remaining quantity 2999 not found in message.
+❌ oil: Expected cost 0.5 not found in message.]]></message>
+                  <stack-trace><![CDATA[   at ENSEK_Test.steps.BuyProductSteps.ThenAllPurchaseResponsesShouldBeValid() in C:\Users\User\source\repos\EnseK_API\ENSEK_Test\steps\BuyProductSteps.cs:line 88
+   at InvokeStub_Action`1.Invoke(Object, Span`1)
+]]></stack-trace>
+                </assertion>
+              </assertions>
+            </test-case>
+            <test-case id="1-1005" name="BuyingProductWithInvalidIDsResultsInBadRequest" fullname="Ensek_Tests.Features.BuyEnergyProductsFeature.BuyingProductWithInvalidIDsResultsInBadRequest" methodname="BuyingProductWithInvalidIDsResultsInBadRequest" classname="Ensek_Tests.Features.BuyEnergyProductsFeature" runstate="Runnable" seed="362176030" result="Passed" start-time="2025-06-12T10:31:04.6009581Z" end-time="2025-06-12T10:31:04.9464066Z" duration="0.345449" asserts="2">
+              <properties>
+                <property name="Description" value="Buying product with invalid IDs results in bad request" />
+              </properties>
+              <output><![CDATA[Given the test environment is set to "QA"
+-> done: CommonSetupSteps.GivenTheTestEnvironmentIsSetTo("QA") (0.0s)
+Given the system is reset to a clean state
+-> done: CommonSetupSteps.GivenTheSystemIsResetToACleanState() (0.2s)
+When the user buys product with ID "1124422324242424" and quantity "242424242424"
+-> done: BuyProductSteps.WhenTheUserBuysProduct("1124422324242424", "242424242424") (0.2s)
+Then the response code should be 400
+❌ Request failed: BadRequest - No error message
+-> done: BuyProductSteps.ThenTheResponseCodeShouldBe(400) (0.0s)
+]]></output>
+            </test-case>
+            <test-case id="1-1004" name="UnauthenticatedUserBuysAProduct" fullname="Ensek_Tests.Features.BuyEnergyProductsFeature.UnauthenticatedUserBuysAProduct" methodname="UnauthenticatedUserBuysAProduct" classname="Ensek_Tests.Features.BuyEnergyProductsFeature" runstate="Runnable" seed="645029639" result="Passed" start-time="2025-06-12T10:31:04.9464817Z" end-time="2025-06-12T10:31:05.2220619Z" duration="0.275581" asserts="3">
+              <properties>
+                <property name="Description" value="Unauthenticated user buys a product" />
+              </properties>
+              <output><![CDATA[Given the test environment is set to "QA"
+-> done: CommonSetupSteps.GivenTheTestEnvironmentIsSetTo("QA") (0.0s)
+Given the system is reset to a clean state
+-> done: CommonSetupSteps.GivenTheSystemIsResetToACleanState() (0.2s)
+When an unauthenticated user buys product with ID "1" and quantity "2"
+-> done: BuyProductSteps.WhenAnUnauthenticatedUserBuysProduct("1", "2") (0.1s)
+Then the response code should be 200
+✅ Response deserialized: {
+  "message": "You have purchased 2998 m³ at a cost of 0.68 there are 2 units remaining. Your order id is 810637b6-183e-4944-8b0d-28136bada7a1."
+}
+-> done: BuyProductSteps.ThenTheResponseCodeShouldBe(200) (0.0s)
+]]></output>
+            </test-case>
+            <test-case id="1-1003" name="UnauthorizedUserCannotBuyAProduct" fullname="Ensek_Tests.Features.BuyEnergyProductsFeature.UnauthorizedUserCannotBuyAProduct" methodname="UnauthorizedUserCannotBuyAProduct" classname="Ensek_Tests.Features.BuyEnergyProductsFeature" runstate="Runnable" seed="1045362934" result="Failed" start-time="2025-06-12T10:31:05.2221455Z" end-time="2025-06-12T10:31:05.5740569Z" duration="0.351912" asserts="2">
+              <properties>
+                <property name="Description" value="Unauthorized user cannot buy a product" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Expected: 401
+  But was:  200
+]]></message>
+                <stack-trace><![CDATA[   at ENSEK_Test.steps.BuyProductSteps.ThenTheResponseCodeShouldBe(Int32 statusCode) in C:\Users\User\source\repos\EnseK_API\ENSEK_Test\steps\BuyProductSteps.cs:line 54
+   at InvokeStub_Action`2.Invoke(Object, Span`1)
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Given the test environment is set to "QA"
+-> done: CommonSetupSteps.GivenTheTestEnvironmentIsSetTo("QA") (0.0s)
+Given the system is reset to a clean state
+-> done: CommonSetupSteps.GivenTheSystemIsResetToACleanState() (0.2s)
+Given the user's credentials are overridden with "special_user" and "special_password"
+-> done: BuyProductSteps.GivenUserCredentialsAreOverridden("special_user", "special_password") (0.0s)
+When the user buys product with ID "1" and quantity "2"
+-> done: BuyProductSteps.WhenTheUserBuysProduct("1", "2") (0.2s)
+Then the response code should be 401
+-> error:   Expected: 401
+  But was:  200
+ (0.0s)
+]]></output>
+              <assertions>
+                <assertion result="Failed">
+                  <message><![CDATA[  Expected: 401
+  But was:  200
+]]></message>
+                  <stack-trace><![CDATA[   at ENSEK_Test.steps.BuyProductSteps.ThenTheResponseCodeShouldBe(Int32 statusCode) in C:\Users\User\source\repos\EnseK_API\ENSEK_Test\steps\BuyProductSteps.cs:line 54
+   at InvokeStub_Action`2.Invoke(Object, Span`1)
+]]></stack-trace>
+                </assertion>
+              </assertions>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1-1007" name="DeleteOrdersFeature" fullname="Ensek_Tests.Features.DeleteOrdersFeature" classname="Ensek_Tests.Features.DeleteOrdersFeature" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2025-06-12T10:31:05.5747080Z" end-time="2025-06-12T10:31:06.0748947Z" duration="0.500187" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="5">
+            <properties>
+              <property name="Description" value="Delete Orders" />
+              <property name="Category" value="feature" />
+            </properties>
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1-1008" name="AuthenticatedUserDeletesAValidOrder" fullname="Ensek_Tests.Features.DeleteOrdersFeature.AuthenticatedUserDeletesAValidOrder" methodname="AuthenticatedUserDeletesAValidOrder" classname="Ensek_Tests.Features.DeleteOrdersFeature" runstate="Runnable" seed="1111499103" result="Failed" start-time="2025-06-12T10:31:05.5753413Z" end-time="2025-06-12T10:31:06.0745944Z" duration="0.499253" asserts="5">
+              <properties>
+                <property name="Description" value="Authenticated user deletes a valid order" />
+              </properties>
+              <failure>
+                <message><![CDATA[  ❌ Failed to delete the order.
+  Expected: 200
+  But was:  500
+]]></message>
+                <stack-trace><![CDATA[   at ENSEK_Test.steps.DeleteOrderSteps.ThenTheOrderDeletionShouldReturnStatusCode200() in C:\Users\User\source\repos\EnseK_API\ENSEK_Test\steps\DeleteOrderSteps.cs:line 54
+   at InvokeStub_Action`1.Invoke(Object, Span`1)
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Given the test environment is set to "QA"
+-> done: CommonSetupSteps.GivenTheTestEnvironmentIsSetTo("QA") (0.0s)
+And the system is reset to a clean state
+-> done: CommonSetupSteps.GivenTheSystemIsResetToACleanState() (0.2s)
+When the user retrieves the list of orders
+-> done: DeleteOrderSteps.WhenTheUserRetrievesTheListOfOrders() (0.2s)
+And the user deletes the first order
+-> done: DeleteOrderSteps.WhenTheUserDeletesTheFirstOrder() (0.1s)
+Then the order deletion should return status code 200
+-> error:   ❌ Failed to delete the order.
+  Expected: 200
+  But was:  500
+ (0.0s)
+]]></output>
+              <assertions>
+                <assertion result="Failed">
+                  <message><![CDATA[  ❌ Failed to delete the order.
+  Expected: 200
+  But was:  500
+]]></message>
+                  <stack-trace><![CDATA[   at ENSEK_Test.steps.DeleteOrderSteps.ThenTheOrderDeletionShouldReturnStatusCode200() in C:\Users\User\source\repos\EnseK_API\ENSEK_Test\steps\DeleteOrderSteps.cs:line 54
+   at InvokeStub_Action`1.Invoke(Object, Span`1)
+]]></stack-trace>
+                </assertion>
+              </assertions>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1-1009" name="GetAndValidateOrdersFeature" fullname="Ensek_Tests.Features.GetAndValidateOrdersFeature" classname="Ensek_Tests.Features.GetAndValidateOrdersFeature" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2025-06-12T10:31:06.0750773Z" end-time="2025-06-12T10:31:07.5991828Z" duration="1.524106" total="2" passed="1" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="8">
+            <properties>
+              <property name="Description" value="Get and validate orders" />
+              <property name="Category" value="feature" />
+            </properties>
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1-1010" name="BuyAvailableFuelsAndValidatePlacedOrders" fullname="Ensek_Tests.Features.GetAndValidateOrdersFeature.BuyAvailableFuelsAndValidatePlacedOrders" methodname="BuyAvailableFuelsAndValidatePlacedOrders" classname="Ensek_Tests.Features.GetAndValidateOrdersFeature" runstate="Runnable" seed="615910692" result="Failed" start-time="2025-06-12T10:31:06.0755502Z" end-time="2025-06-12T10:31:07.2387792Z" duration="1.163229" asserts="5">
+              <properties>
+                <property name="Description" value="Buy available fuels and validate placed orders" />
+              </properties>
+              <failure>
+                <message><![CDATA[❌ Validation errors:
+❌ Order missing: ID=bad97af2-8c92-4527-a970-5c1d34aff37a, Fuel=Electric, Qty=1]]></message>
+                <stack-trace><![CDATA[   at ENSEK_Test.Steps.GetOrdersSteps.ThenThePlacedOrdersShouldBeFoundInTheOrderList() in C:\Users\User\source\repos\EnseK_API\ENSEK_Test\steps\GetOrderSteps.cs:line 52
+   at Reqnroll.Bindings.AsyncMethodHelper.ConvertTaskOfT(Task task, Boolean getValue)
+   at Reqnroll.Bindings.BindingDelegateInvoker.InvokeDelegateAsync(Delegate bindingDelegate, Object[] invokeArgs, ExecutionContextHolder executionContext)
+   at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)
+   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepAsync(IContextManager contextManager, StepInstance stepInstance)
+   at Reqnroll.Infrastructure.TestExecutionEngine.OnAfterLastStepAsync()
+   at Reqnroll.TestRunner.CollectScenarioErrorsAsync()
+   at Ensek_Tests.Features.GetAndValidateOrdersFeature.ScenarioCleanupAsync()
+   at Ensek_Tests.Features.GetAndValidateOrdersFeature.BuyAvailableFuelsAndValidatePlacedOrders() in C:\Users\User\source\repos\EnseK_API\ENSEK_Test\features\GetOrder.feature:line 10
+   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.BlockUntilCompleted()
+   at NUnit.Framework.Internal.MessagePumpStrategy.NoMessagePumpStrategy.WaitForCompletion(AwaitAdapter awaiter)
+   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(Func`1 invoke)
+   at NUnit.Framework.Internal.Commands.TestMethodCommand.RunTestMethod(TestExecutionContext context)
+   at NUnit.Framework.Internal.Commands.TestMethodCommand.Execute(TestExecutionContext context)
+   at NUnit.Framework.Internal.Commands.BeforeAndAfterTestCommand.<>c__DisplayClass1_0.<Execute>b__0()
+   at NUnit.Framework.Internal.Commands.DelegatingTestCommand.RunTestMethodInThreadAbortSafeZone(TestExecutionContext context, Action action)
+]]></stack-trace>
+              </failure>
+              <output><![CDATA[Given the test environment is set to "QA"
+-> done: CommonSetupSteps.GivenTheTestEnvironmentIsSetTo("QA") (0.0s)
+And the system is reset to a clean state
+-> done: CommonSetupSteps.GivenTheSystemIsResetToACleanState() (0.2s)
+When the user buys all available fuels
+🧪 Electric: You have purchased 1 kWh at a cost of 0.47 there are 4321 units remaining. Your order id is bad97af2-8c92-4527-a970-5c1d34aff37a.
+🧪 Gas: You have purchased 2999 m³ at a cost of 0.34 there are 1 units remaining. Your order id is 26770e57-3ebf-4240-a7da-823ef949320f.
+🧪 Nuclear: There is no nuclear fuel to purchase!
+🧪 Oil: You have purchased 1 Litres at a cost of 0.6 there are 19 units remaining. Your orderid is 7851632f-f912-4235-b2b3-82ef8c88ca56.
+-> done: GetOrdersSteps.WhenTheUserBuysAllAvailableFuels() (0.9s)
+Then the placed orders should be found in the order list
+-> error: ❌ Validation errors:
+❌ Order missing: ID=bad97af2-8c92-4527-a970-5c1d34aff37a, Fuel=Electric, Qty=1 (0.1s)
+]]></output>
+              <assertions>
+                <assertion result="Failed">
+                  <message><![CDATA[❌ Validation errors:
+❌ Order missing: ID=bad97af2-8c92-4527-a970-5c1d34aff37a, Fuel=Electric, Qty=1]]></message>
+                  <stack-trace><![CDATA[   at ENSEK_Test.Steps.GetOrdersSteps.ThenThePlacedOrdersShouldBeFoundInTheOrderList() in C:\Users\User\source\repos\EnseK_API\ENSEK_Test\steps\GetOrderSteps.cs:line 52
+]]></stack-trace>
+                </assertion>
+              </assertions>
+            </test-case>
+            <test-case id="1-1011" name="CountOrdersCreatedBeforeToday" fullname="Ensek_Tests.Features.GetAndValidateOrdersFeature.CountOrdersCreatedBeforeToday" methodname="CountOrdersCreatedBeforeToday" classname="Ensek_Tests.Features.GetAndValidateOrdersFeature" runstate="Runnable" seed="1402796205" result="Passed" start-time="2025-06-12T10:31:07.2388081Z" end-time="2025-06-12T10:31:07.5985199Z" duration="0.359712" asserts="3">
+              <properties>
+                <property name="Description" value="Count orders created before today" />
+              </properties>
+              <output><![CDATA[Given the test environment is set to "QA"
+-> done: CommonSetupSteps.GivenTheTestEnvironmentIsSetTo("QA") (0.0s)
+And the system is reset to a clean state
+-> done: CommonSetupSteps.GivenTheSystemIsResetToACleanState() (0.2s)
+When the user retrieves the list of All orders
+-> done: GetOrdersSteps.WhenTheUserRetrievesTheListOfOrders() (0.2s)
+Then the number of orders created before today should be shown
+✅ Orders before today: 5
+-> done: GetOrdersSteps.ThenTheNumberOfOrdersCreatedBeforeTodayShouldBeShown() (0.0s)
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1-1016" name="UpdateAnExistingOrderFeature" fullname="Ensek_Tests.Features.UpdateAnExistingOrderFeature" classname="Ensek_Tests.Features.UpdateAnExistingOrderFeature" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2025-06-12T10:31:07.5993193Z" end-time="2025-06-12T10:31:09.3764634Z" duration="1.777144" total="3" passed="2" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="33">
+            <properties>
+              <property name="Description" value="Update an existing order" />
+              <property name="Category" value="feature" />
+            </properties>
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="ParameterizedMethod" id="1-1020" name="UpdateAnExistingOrderWithANewQuantity" fullname="Ensek_Tests.Features.UpdateAnExistingOrderFeature.UpdateAnExistingOrderWithANewQuantity" classname="Ensek_Tests.Features.UpdateAnExistingOrderFeature" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2025-06-12T10:31:07.5997697Z" end-time="2025-06-12T10:31:09.3759301Z" duration="1.776160" total="3" passed="2" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="33">
+              <properties>
+                <property name="Description" value="Update an existing order with a new quantity" />
+              </properties>
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1-1017" name="UpdateAnExistingOrderWithANewQuantity(&quot;5&quot;,null)" fullname="Ensek_Tests.Features.UpdateAnExistingOrderFeature.UpdateAnExistingOrderWithANewQuantity(&quot;5&quot;,null)" methodname="UpdateAnExistingOrderWithANewQuantity" classname="Ensek_Tests.Features.UpdateAnExistingOrderFeature" runstate="Runnable" seed="1253321673" result="Failed" start-time="2025-06-12T10:31:07.6000675Z" end-time="2025-06-12T10:31:08.2347748Z" duration="0.634707" asserts="11">
+                <failure>
+                  <message><![CDATA[  ❌ Fuel type mismatch
+  Expected string length 8 but was 4. Strings differ at index 4.
+  Expected: "electric"
+  But was:  "elec"
+  ---------------^
+]]></message>
+                  <stack-trace><![CDATA[   at ENSEK_Test.Steps.UpdateOrderSteps.ThenTheOrderShouldBeUpdatedSuccessfully(Int32 expectedQuantity) in C:\Users\User\source\repos\EnseK_API\ENSEK_Test\steps\UpdateOrderSteps.cs:line 71
+   at InvokeStub_Action`2.Invoke(Object, Span`1)
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[Given the test environment is set to "QA"
+-> done: CommonSetupSteps.GivenTheTestEnvironmentIsSetTo("QA") (0.0s)
+And the system is reset to a clean state
+-> done: CommonSetupSteps.GivenTheSystemIsResetToACleanState() (0.2s)
+And the user has existing orders and inventory
+-> done: UpdateOrderSteps.GivenTheUserHasExistingOrdersAndInventory() (0.3s)
+When the user updates the first order with quantity 5
+-> done: UpdateOrderSteps.WhenTheUserUpdatesTheFirstOrderWithQuantity(5) (0.2s)
+Then the order should be updated successfully with the quantity 5
+-> error:   ❌ Fuel type mismatch
+  Expected string length 8 but was 4. Strings differ at index 4.
+  Expected: "electric"
+  But was:  "elec"
+  ---------------^
+ (0.0s)
+]]></output>
+                <assertions>
+                  <assertion result="Failed">
+                    <message><![CDATA[  ❌ Fuel type mismatch
+  Expected string length 8 but was 4. Strings differ at index 4.
+  Expected: "electric"
+  But was:  "elec"
+  ---------------^
+]]></message>
+                    <stack-trace><![CDATA[   at ENSEK_Test.Steps.UpdateOrderSteps.ThenTheOrderShouldBeUpdatedSuccessfully(Int32 expectedQuantity) in C:\Users\User\source\repos\EnseK_API\ENSEK_Test\steps\UpdateOrderSteps.cs:line 71
+   at InvokeStub_Action`2.Invoke(Object, Span`1)
+]]></stack-trace>
+                  </assertion>
+                </assertions>
+              </test-case>
+              <test-case id="1-1018" name="UpdateAnExistingOrderWithANewQuantity(&quot;10&quot;,null)" fullname="Ensek_Tests.Features.UpdateAnExistingOrderFeature.UpdateAnExistingOrderWithANewQuantity(&quot;10&quot;,null)" methodname="UpdateAnExistingOrderWithANewQuantity" classname="Ensek_Tests.Features.UpdateAnExistingOrderFeature" runstate="Runnable" seed="1850640817" result="Passed" start-time="2025-06-12T10:31:08.2347997Z" end-time="2025-06-12T10:31:08.8205281Z" duration="0.585729" asserts="11">
+                <output><![CDATA[Given the test environment is set to "QA"
+-> done: CommonSetupSteps.GivenTheTestEnvironmentIsSetTo("QA") (0.0s)
+And the system is reset to a clean state
+-> done: CommonSetupSteps.GivenTheSystemIsResetToACleanState() (0.2s)
+And the user has existing orders and inventory
+-> done: UpdateOrderSteps.GivenTheUserHasExistingOrdersAndInventory() (0.3s)
+When the user updates the first order with quantity 10
+-> done: UpdateOrderSteps.WhenTheUserUpdatesTheFirstOrderWithQuantity(10) (0.1s)
+Then the order should be updated successfully with the quantity 10
+✅ Order 31fc32da-bccb-44ab-9352-4f43fc44ed4b updated: quantity = 10, energy_id = 1
+-> done: UpdateOrderSteps.ThenTheOrderShouldBeUpdatedSuccessfully(10) (0.0s)
+]]></output>
+              </test-case>
+              <test-case id="1-1019" name="UpdateAnExistingOrderWithANewQuantity(&quot;20&quot;,null)" fullname="Ensek_Tests.Features.UpdateAnExistingOrderFeature.UpdateAnExistingOrderWithANewQuantity(&quot;20&quot;,null)" methodname="UpdateAnExistingOrderWithANewQuantity" classname="Ensek_Tests.Features.UpdateAnExistingOrderFeature" runstate="Runnable" seed="1042460776" result="Passed" start-time="2025-06-12T10:31:08.8208783Z" end-time="2025-06-12T10:31:09.3759002Z" duration="0.555022" asserts="11">
+                <output><![CDATA[Given the test environment is set to "QA"
+-> done: CommonSetupSteps.GivenTheTestEnvironmentIsSetTo("QA") (0.0s)
+And the system is reset to a clean state
+-> done: CommonSetupSteps.GivenTheSystemIsResetToACleanState() (0.2s)
+And the user has existing orders and inventory
+-> done: UpdateOrderSteps.GivenTheUserHasExistingOrdersAndInventory() (0.3s)
+When the user updates the first order with quantity 20
+-> done: UpdateOrderSteps.WhenTheUserUpdatesTheFirstOrderWithQuantity(20) (0.1s)
+Then the order should be updated successfully with the quantity 20
+✅ Order 2cdd6f69-95df-437e-b4d3-e772472db8de updated: quantity = 20, energy_id = 2
+-> done: UpdateOrderSteps.ThenTheOrderShouldBeUpdatedSuccessfully(20) (0.0s)
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

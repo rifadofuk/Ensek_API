@@ -6,6 +6,8 @@ using Newtonsoft.Json;
 
 namespace ENSEK_Test
 {
+    [Parallelizable(ParallelScope.All)]
+
     public class BuyProductTests
     {
         private APIClient apiClient;
@@ -14,6 +16,9 @@ namespace ENSEK_Test
         public async Task Setup()
         {
             // Set environment and initialize API client
+            //set ENSEK_ENV=PROD
+            //dotnet test
+           
             EnvironmentConfig.CurrentEnvironment = Environment.GetEnvironmentVariable("ENSEK_ENV") ?? "QA";
             ApiCredentials.ClearOverrides();
             apiClient = new APIClient(useAuthentication: true);
@@ -35,13 +40,21 @@ namespace ENSEK_Test
 
             Assert.That((int)response.StatusCode, Is.EqualTo(200));
             CommonHelper.LogAndValidateResponse<dynamic>(response);
+     
+            //CommonHelper.LogAndValidateResponse<dynamic>(response, Product=>{
+            //    Assert.IsNotNull(Product, "Product should not be null.");
+            //    Assert.IsTrue(Product.message.ToString().Contains("Order placed successfully"), "Order message should indicate success.");
+            //});
+
         }
 
         [Test]
         public async Task VerifyUnauthorizedUserCannotBuyProduct()
         {
+
             ApiCredentials.OverrideUsername = "special_user";
             ApiCredentials.OverridePassword = "special_password";
+            apiClient = new APIClient(useAuthentication: true);
 
             var response = await apiClient.BuyProduct("1", "2");
 

@@ -1,0 +1,19 @@
+{
+  "server": {
+    "url": " https://demo.reportportal.io",
+    "project": "default_personal",
+    "authentication": {
+      "uuid": "ENSEK-TEST_EAg-XX5zScCWQrJiu2-4GgLDvAh2mv98xCFv9gaZwh0TGapycasPIvb2yJbDKHWt"
+    }
+  },
+  "launch": {
+    "name": "Reqnroll BDD Test Run",
+    "description": "Test run from Reqnroll integrated with ReportPortal",
+    "attributes": [ "feature"],
+    "rerun": false
+  },
+  "logging": {
+    "enable": true,
+    "level": "Info"
+  }
+}

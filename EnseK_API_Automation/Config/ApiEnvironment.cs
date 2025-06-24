@@ -16,4 +16,6 @@ namespace EnseK_API_Automation.constants
             ? url
             : throw new Exception($"Base URL not defined for environment: {EnvironmentConfig.CurrentEnvironment}");
     }
+
+    
 }

@@ -1,0 +1,20 @@
+{
+  "server": {
+    "url": " https://demo.reportportal.io/api/v1",
+    "project": "default_personal",
+    "authentication": {
+      "uuid": "test-ensek_bjhZIFXXSkemdrdl4Qf8eUN74F9fuZf3f9UHaqwC8z_luyHg-udmoKEhw5iyZr5n"
+    }
+  },
+  "launch": {
+    "name": "Reqnroll BDD Test Run June24",
+    "description": "Test run from Reqnroll integrated with ReportPortal",
+    "attributes": [ "feature" ],
+    "rerun": false
+  },
+  "logging": {
+    "enable": true,
+    "level": "Info",
+    "stepBased": true
+  }
+}

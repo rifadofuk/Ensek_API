@@ -2,6 +2,7 @@
 using EnseK_API_Automation.config;
 using EnseK_API_Automation.Helpers;
 using EnseK_API_Automation.Models.Response;
+using Ensek_API_Client.Helpers;
 using Newtonsoft.Json;
 
 namespace ENSEK_Test;
@@ -32,12 +33,19 @@ public class DeleteOrderTest
     public async Task VerifyUserCanDeleteValidOrders()
     {
         // Step 1: Fetch all current orders
+        List<Order> orders;
         var client = new APIClient(useAuthentication: true);
         var ordersResponse = await client.GetOrders();
 
         Assert.That((int)ordersResponse.StatusCode, Is.EqualTo(200), "❌ Failed to fetch orders");
 
-        var orders = JsonConvert.DeserializeObject<List<Order>>(ordersResponse.Content);
+        Assert.That(ordersResponse.Content, Is.Not.Null.And.Not.Empty, "❌ Response content is null or empty");
+
+        
+
+       orders = JsonHelper.DeserilizeJson<List<Order>>(ordersResponse.Content);
+
+
         Assert.IsNotNull(orders, "❌ Failed to deserialize order list.");
         Assert.IsNotEmpty(orders, "❌ No orders found to delete.");
 

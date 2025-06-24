@@ -73,6 +73,31 @@ namespace ENSEK_Test.Steps
             TestContext.WriteLine($"✅ Order {updatedOrder.Id} updated: quantity = {updatedOrder.Quantity}, energy_id = {updatePayload.energy_id}");
         }
 
+        //[When("the user updates the following orders:")]
+        //public void WhenTheUserUpdatesTheFollowingOrders(DataTable dataTable)
+        //{
+        //    foreach (var row in dataTable.Rows)
+        //    {
+        //        string orderId = row["OrderID"];
+        //        int qnty = int.Parse(row["kerer"]);
+        //        int energyID = int.Parse(row["id"]);
+
+        //        var payload = new Order
+        //        {
+        //            Id = orderId,
+        //            Quantity = qnty,
+        //        };
+
+        //    }
+        //}
+
+        //[Then("all orders should be updated successfully")]
+        //public void ThenAllOrdersShouldBeUpdatedSuccessfully()
+        //{
+        //    throw new PendingStepException();
+        //}
+
+
         [AfterScenario]
         public void AfterScenario()
         {

@@ -15,3 +15,10 @@ Feature: Update an existing order
       | 5           |
       | 10          |
       | 20          |
+
+# Scenario: Update multiple orders with new quantities
+#  When the user updates the following orders:
+ #   | OrderId | NewQuantity | ProductType |
+#    | 101     | 5           | Gas         |
+ #   | 102     | 10          | Electricity |
+ # Then all orders should be updated successfully

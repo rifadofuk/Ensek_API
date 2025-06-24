@@ -1,6 +1,7 @@
 ﻿using EnseK_API_Automation.config;
 using EnseK_API_Automation.constants;
 using EnseK_API_Automation.Models.Response;
+using NUnit.Framework;
 using RestSharp;
 using RestSharp.Authenticators;
 
@@ -43,13 +44,13 @@ namespace EnseK_API_Automation.Auth
             // Use ExecutePostAsync to get status code
             var response = await client.ExecutePostAsync<TokenResponse>(request);
 
-            // Fail on 401 Unauthorized
+           // Fail on 401 Unauthorized
             //if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
             //{
             //    Assert.Fail("❌ Authentication failed: 401 Unauthorized. Check username/password.");
             //}
 
-            // Handle other failures or missing token
+            ////Handle other failures or missing token
             //if (!response.IsSuccessful || response.Data == null || string.IsNullOrEmpty(response.Data.Access_token))
             //{
             //    Assert.Fail($"❌ Failed to retrieve token. Status: {response.StatusCode}, Body: {response.Content}");

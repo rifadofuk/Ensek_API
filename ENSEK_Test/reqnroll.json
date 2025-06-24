@@ -4,5 +4,15 @@
       "enabled": true,
       "outputDirectory": "./reports/junit"
     }
+  },
+  "plugins": [
+    {
+      "name": "ReportPortal.Reqnroll"
+    }
+  ],
+  "reqnroll": {
+    "bindingCulture": {
+      "language": "en"
+    }
   }
 }

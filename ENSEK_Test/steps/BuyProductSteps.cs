@@ -14,6 +14,7 @@ namespace ENSEK_Test.steps
         private APIClient apiClient;
         private RestResponse response;
         private RestResponse fuelResponse;
+        private FeatureContext _featureContext;
         private int expectedStatusCode;
         private List<string> validationErrors = new();
 
@@ -27,9 +28,18 @@ namespace ENSEK_Test.steps
         //    Assert.That((int)resetResponse.StatusCode, Is.EqualTo(200), "Reset failed.");
         //}
 
+        public BuyProductSteps(FeatureContext fc)
+        {
+            this._featureContext= fc;
+            // Initialize the API client with authentication enabled
+        }
+
         [Given(@"the user's credentials are overridden with ""(.*)"" and ""(.*)""")]
         public void GivenUserCredentialsAreOverridden(string username, string password)
         {
+           // apiClient = _featureContext.Get<APIClient>("ApiClient") ?? new APIClient(useAuthentication: true);
+
+            Console.WriteLine(_featureContext.FeatureInfo.Title);
             ApiCredentials.OverrideUsername = username;
             ApiCredentials.OverridePassword = password;
         }
